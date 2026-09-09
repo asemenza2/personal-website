@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographs - Andy Semenza</title>
+    <link rel="stylesheet" href="../css/site.css?v=8">
+</head>
+<body>
+    <div class="site-frame">
+        <header class="site-header">
+            <a class="site-mark" href="../index.html">Andy Semenza</a>
+
+            <nav class="site-nav" aria-label="Primary">
+                <div class="menu">
+                    <button class="menu-toggle" type="button" aria-expanded="false">
+                        <span class="menu-text">Writing</span>
+                        <span class="menu-caret" aria-hidden="true"></span>
+                    </button>
+                    <div class="menu-panel">
+                        <a class="menu-item" href="../blog/blog.html">Working on it...</a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <button class="menu-toggle" type="button" aria-expanded="false">
+                        <span class="menu-text">Photographs</span>
+                        <span class="menu-caret" aria-hidden="true"></span>
+                    </button>
+                    <div class="menu-panel" data-project-menu data-base="photography.html?project="></div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="gallery-main">
+            <div class="gallery-stack" id="gallery"></div>
+        </main>
+    </div>
+
+    <div class="lightbox" id="lightbox" hidden>
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">&times;</button>
+        <button class="lightbox-button lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous">&#8249;</button>
+        <div class="lightbox-stage">
+            <img class="lightbox-image" id="lightbox-image" alt="">
+        </div>
+        <button class="lightbox-button lightbox-next" id="lightbox-next" type="button" aria-label="Next">&#8250;</button>
+    </div>
+
+    <script src="../js/gallery.js?v=8"></script>
+</body>
+</html>

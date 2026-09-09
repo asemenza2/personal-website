@@ -1,0 +1,194 @@
+/* THE ACID-ARCHIVAL THEME 
+   Edgy, Colorful, High-Density
+*/
+
+:root {
+    --bg: #050505;             /* Deep Black */
+    --accent: #ccff00;         /* Toxic Lemon / Acid Green */
+    --secondary: #0066ff;      /* Electric Blue */
+    --text: #ffffff;
+    --border-weight: 2px;
+    --mono: 'Courier New', Courier, monospace;
+    --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* 1. Global Chaos & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--mono); /* Mono everywhere for that 'tech-edge' */
+    line-height: 1.5;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* 2. Navigation (Floating Dashboard) */
+header {
+    border: var(--border-weight) solid var(--accent);
+    padding: 40px;
+    margin-bottom: 80px;
+    position: sticky;
+    top: 20px;
+    background: var(--bg);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-shadow: 8px 8px 0px var(--secondary); /* Hard offset shadow */
+}
+
+.site-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--accent);
+    line-height: 0.8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+nav a:hover, nav a.active {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* 3. Typography & Links */
+h1, h2, h3 {
+    font-family: var(--sans);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 2rem;
+}
+
+a {
+    color: var(--secondary);
+    transition: all 0.1s;
+    cursor: crosshair; /* Edgy cursor */
+}
+
+a:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+/* 4. Compendium (The Data Dump) */
+.compendium {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2px; /* Tight borders */
+    background: var(--accent); /* Borders are the background color */
+    border: var(--border-weight) solid var(--accent);
+}
+
+.compendium section {
+    background: var(--bg);
+    padding: 30px;
+}
+
+.compendium h3 {
+    color: var(--accent);
+    font-size: 1.2rem;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+}
+
+.compendium li {
+    font-size: 0.85rem;
+    list-style: none;
+    padding: 4px 0;
+    border-bottom: 1px dotted #333;
+}
+
+/* 5. Photography (The "Glitch" Gallery) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    border: var(--border-weight) solid #333;
+    padding: 15px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card:hover {
+    transform: rotate(-1deg) scale(1.02);
+    border-color: var(--secondary);
+}
+
+.project-thumbnail {
+    aspect-ratio: 1;
+    filter: grayscale(1) contrast(1.2); /* Harsh black and white */
+    mix-blend-mode: screen;
+    margin-bottom: 1rem;
+}
+
+.project-card:hover .project-thumbnail {
+    filter: grayscale(0) contrast(1);
+    mix-blend-mode: normal;
+}
+
+/* 6. Blog (Massive Type) */
+.blog-entry {
+    border-bottom: var(--border-weight) solid var(--accent);
+    padding: 4rem 0;
+}
+
+.blog-entry h3 {
+    font-size: 4rem;
+    line-height: 0.9;
+}
+
+.blog-entry time {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* 7. The "Crazy" Elements */
+/* Custom Selection Color */
+::selection {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* Hide scrollbar but keep functionality for a cleaner edge */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+/* 8. Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .blog-entry h3 { font-size: 2.5rem; }
+}

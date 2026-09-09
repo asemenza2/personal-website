@@ -1,0 +1,451 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #222;
+    background-color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+    margin-bottom: 1.5rem;
+    max-width: 680px;
+}
+
+a {
+    color: #222;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Header and Navigation */
+header {
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 3rem;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #666;
+}
+
+nav a:hover,
+nav a.active {
+    color: #222;
+}
+
+nav a.active {
+    font-weight: 500;
+}
+
+/* Home Page */
+.home-content {
+    padding: 4rem 0;
+}
+
+.intro {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+/* Page Titles */
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+/* Blog Index */
+.blog-index {
+    max-width: 800px;
+}
+
+.blog-entry {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.blog-entry:last-child {
+    border-bottom: none;
+}
+
+.blog-entry h3 {
+    margin-bottom: 0.5rem;
+}
+
+.blog-entry h3 a {
+    text-decoration: none;
+}
+
+.blog-entry h3 a:hover {
+    text-decoration: underline;
+}
+
+.blog-entry time {
+    display: block;
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.excerpt {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Blog Post */
+.blog-post {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.blog-post article h2 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post article time {
+    display: block;
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.blog-post article p {
+    margin-bottom: 1.75rem;
+    line-height: 1.8;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.875rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.back-link:hover {
+    color: #222;
+}
+
+.back-link.bottom {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Compendium */
+.compendium {
+    max-width: 800px;
+}
+
+.compendium .intro {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.compendium section {
+    margin-bottom: 3rem;
+}
+
+.compendium h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.compendium ul {
+    list-style: none;
+}
+
+.compendium li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.film-list li,
+.book-list li,
+.music-list li {
+    font-size: 1rem;
+}
+
+.website-list li {
+    font-size: 0.9375rem;
+}
+
+/* Photography Index */
+.photo-intro {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+    max-width: 680px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.project-card {
+    text-decoration: none;
+    color: #222;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+    opacity: 0.8;
+}
+
+.project-thumbnail {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background-color: #f5f5f5;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-year {
+    font-size: 0.875rem;
+    color: #666;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Project Gallery */
+.project-description {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    max-width: 680px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.photo-item {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.lightbox.active {
+    display: block;
+}
+
+.lightbox-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    font-size: 40px;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.prev,
+.next {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 300;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.3s ease;
+    transform: translateY(-50%);
+}
+
+.prev:hover,
+.next:hover {
+    opacity: 0.7;
+}
+
+/* About Page */
+.about-content {
+    max-width: 680px;
+}
+
+.bio p:last-child {
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    header {
+        padding: 2rem 0 1.5rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.9375rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .blog-post article h2 {
+        font-size: 1.75rem;
+    }
+
+    .close {
+        top: 20px;
+        right: 25px;
+        font-size: 30px;
+    }
+
+    .prev,
+    .next {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        gap: 0.75rem;
+    }
+}
